@@ -1,0 +1,63 @@
+Criptografia não se aplicaapenas a textos, mas também a imagens e binários.
+
+Chave = um número de 256 bits, número grande demais.
+
+----------------
+
+Tipos de Criptografia
+1) Simétrica 
+	Se usa apenas uma chave para abrir e para fechar a porta. Ou seja, uma única chave para encripitar e decriptar. A chave é independente do texto.
+Comparação = seed do Minecraft.
+
+2) Assimétrica
+	Uma chave para trancar e outra para destrancar. Uma chave pública e outra privada, a pública gera texto criptografado e a privada decripta o texto.
+
+3) Hash
+	Será vista em ED2. A entrada é digerida, gerando uma saída irreversível, não retornando ao original. 
+Vulnerabilidade = Sempre gera o mesmo número para uma mesma senha.
+Diminuir a Vulnerabilidade = conceito "Salt Pepper";
+
+----------------
+
+Ataque de Dicionário, exemplo de MD5 | SHA-1 - não usar!
+Ainda são usados para conferir integridade de downloads.
+base64, HEX, Binário == Não são criptografias! São tipos de representações de números. Ex.: Youtube usa base64 para numerar os vídeos - são as letras no final dos links.
+
+Site para testar encripitação/decripitação em MD5 = https://10015.io/tools/md5-encrypt-decrypt
+
+Base64 normalmente termina em "=".
+
+----------------
+
+Princípios
+
+1) Algoritmo Forte 
+	Sem a chave não é possível retornar ao original, além de não ter padrões em hash. Isso barateia o preço do hardware.
+Livestream = chave Simétrica e de Fluxo
+Senha = cifra de bloco
+
+2) O algoritmo deve seguir 
+	O custo para quebrar a cifra ultrapassa o valor da informação encriptada. O tempo exigido para quebrar a cifra supera o tempo de vida útil da informação.
+
+Computação quântica = pode quebrar a criptografia das arquiteturas atuais
+
+----------------
+
+Como compartilhar as chaves? 
+	Cada um tem um número igual e um número próprio, junta-se os dois e a mistura é mandada pela internet tranquilamente. Ao receber a mistura, adiciona-se a chave própria de quem recebe e assim forma-se um segredo mútuo. Isso é a a troca de chaves de Diffie-Hellman, há uma parte matemática disso.
+
+----------------
+
+Ataques
+	Para conseguir quebrar a criptografia normalmente se é necessário testar metade das chaves possíveis, o que tora o tempo de decripitação absurdo. 
+	O que o atacante tem acesso limita os modos que ele pode atacar. Ex.: Como Turing decriptou o ENIGMA.
+
+----------------
+
+1) Cifra César
+	Troca-se um alfabeto por outro, apenas 25 chaves para testar. 
+
+2) Cifra de Vigenère 
+	Cada letra tem uma chave independente.
+
+
